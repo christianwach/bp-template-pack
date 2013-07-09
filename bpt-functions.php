@@ -76,9 +76,10 @@ function bp_tpack_enqueue_scripts() {
 		'close'             => __( 'Close', 'buddypress' )
 	);
 
-	// BP 1.8 introduces show_x_comments
+	// BP 1.8 introduces 'show_x_comments' and 'unsaved_changes'
 	if ( version_compare( BP_VERSION, '1.7', '>' ) ) {
 		$params['show_x_comments'] = __( 'Show all %d comments', 'buddypress' );
+		$params['unsaved_changes'] = __( 'Your profile has unsaved changes. If you leave the page, the changes will be lost.', 'buddypress' );
 	}
 
 	// BP 1.5+

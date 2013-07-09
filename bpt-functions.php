@@ -76,6 +76,11 @@ function bp_tpack_enqueue_scripts() {
 		'close'             => __( 'Close', 'buddypress' )
 	);
 
+	// BP 1.8 introduces show_x_comments
+	if ( version_compare( BP_VERSION, '1.7', '>' ) ) {
+		$params['show_x_comments'] = __( 'Show all %d comments', 'buddypress' );
+	}
+
 	// BP 1.5+
 	if ( version_compare( BP_VERSION, '1.3', '>' ) ) {
 		// Bump this when changes are made to bust cache
